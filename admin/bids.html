@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Allotment</title>
+    <link rel="stylesheet" href="bids.css">
+</head>
+<body>
+    <h1 class="top-heading">
+       <u> LIST OF BIDDERS WITH RESPECTIVE AMOUNT</u>
+    </h1>
+    <table class="table-complete">
+        <tbody>
+                <th>
+                    <tr>
+                    <td class="row-attributes" >S no.</td>
+                    <td class="row-attributes">Product id</td>
+                    <td class="row-attributes">Bidder Email</td>
+                    <td class="row-attributes">Bidded amount</td>
+                    </tr>
+                </th>
+            
+                {{#each userData}}
+                <tr class="entries upholds">
+                <td class="uphold">{{this.sno }}</td>
+                <td class="uphold">{{this.pid }}</td>
+                <td class="uphold">{{this.email }}</td>
+                <td class="uphold">{{this.price }}</td>
+                </tr>
+                {{/each}}
+        </tbody>
+    </table>
+    <div>
+        <a href="">
+            <input class="buttonss1 btnn" type="button" value="GO BACK" >
+        </a>
+        <a href="">
+        <input class="buttonss2  btnn" type="button" value="CONFIRM PAYMENT">
+        </a>
+    </div>
+</body>
+</html>
